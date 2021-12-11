@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ingressos/screen/login/login_screen.dart';
 
 import '../../../constant.dart';
 
@@ -46,7 +47,14 @@ class LoginAndRegister extends StatelessWidget {
                 ),
                 primary: mPrimaryColor,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const LoginScreen();
+                  }),
+                );
+              },
               child: Container(
                 padding: const EdgeInsets.symmetric(vertical: 14),
                 alignment: Alignment.center,
